@@ -4,9 +4,19 @@
         "dest": "D:/DEV_PROJ/eikon-chart-app/bower_components/trd3chart/",
         "watch": "D:/DEV_PROJ/core-chart-components/src/",
         "sourcemap": {
-            "dir": "D:/DEV_PROJ/core-chart-components/gen_sourcemap/",
+            "dir": "D:/DEV_PROJ/core-chart-components/gen_sourcemap",
             "cmd": "grunt gen_sourcemap",
             "files": ["trd3chart.js", "trd3chart.js.map"]
         }
-    }        
+    },
+    {
+        "root": "D:/DEV_PROJ/financial-chart-components/",
+        "dest": "D:/DEV_PROJ/eikon-chart-app/bower_components/financial-chart-components/FCL/",
+        "watch": "D:/DEV_PROJ/financial-chart-components/src/",
+        "sourcemap": {
+            "dir": "D:/DEV_PROJ/financial-chart-components/gen_sourcemap",
+            "cmd": "gulp gen_sourcemap",
+            "files": ["fcl.js"]
+        }
+    }             
 ]
