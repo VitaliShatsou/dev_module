@@ -22,23 +22,28 @@ module.exports = function(grunt) {
         const { cmd } = sourcemap;
         const done = this.async();
         console.log('cd ' + root + ' && ' + cmd);
-        exec('cd ' + root + ' && ' + cmd, function (error, stdout, stderr) {
-            if(error) {
-                console.log(error, stderr);
-            } else {
-                console.log('succ');
-            }
-            done();
-        });
+        if (root && cmd) {
+            exec('cd ' + root + ' && ' + cmd, function (error, stdout, stderr) {
+                if(error) {
+                    console.log(error, stderr);
+                } else {
+                    console.log('succ');
+                }
+                done();
+            });
+        } else {done();}
     });
 
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.registerTask('watcher', function (index) {
-        const files = settingsArr[index].watch + '**/*.js';
+    grunt.registerTask('watcher', function (name) {
+        const index = settingsArr.map(settings => settings.name).indexOf(name);
+        const files = settingsArr[index].watch;
         grunt.config.set('watch', {
-            files: [files],
+            files,
             tasks: ['gen:' + index + '', 'paste:' + index + ''],
         });
+        grunt.task.run('gen:' + index + '')
+        grunt.task.run('paste:' + index + '')
         grunt.task.run('watch');
     });
 

@@ -1,8 +1,9 @@
 [
     {
+        "name": "trd3",
         "root": "D:/DEV_PROJ/core-chart-components/",
         "dest": "D:/DEV_PROJ/eikon-chart-app/bower_components/trd3chart/",
-        "watch": "D:/DEV_PROJ/core-chart-components/src/",
+        "watch": ["D:/DEV_PROJ/core-chart-components/src/**/*.js"],
         "sourcemap": {
             "dir": "D:/DEV_PROJ/core-chart-components/gen_sourcemap",
             "cmd": "grunt gen_sourcemap",
@@ -10,13 +11,27 @@
         }
     },
     {
+        "name": "fcl",
         "root": "D:/DEV_PROJ/financial-chart-components/",
         "dest": "D:/DEV_PROJ/eikon-chart-app/bower_components/financial-chart-components/FCL/",
-        "watch": "D:/DEV_PROJ/financial-chart-components/src/",
+        "watch": ["D:/DEV_PROJ/financial-chart-components/src/**/*.js"],
         "sourcemap": {
             "dir": "D:/DEV_PROJ/financial-chart-components/gen_sourcemap",
             "cmd": "gulp gen_sourcemap",
             "files": ["fcl.js"]
+        }
+    },    
+    {
+        "name": "cafe-chart",
+        "root": "D:/DEV_PROJ/cafe-chart",
+        "dest": "D:/DEV_PROJ/eikon-chart-app/bower_components/cafe-chart/",
+        "watch": [
+            "D:/DEV_PROJ/cafe-chart/cafe-chart.html", 
+            "D:/DEV_PROJ/cafe-chart/udip/cafeudip.html"
+        ],
+        "sourcemap": {
+            "dir": "D:/DEV_PROJ/cafe-chart",
+            "files": ["cafe-chart.html", "udip/cafeudip.html"]
         }
     }             
 ]
