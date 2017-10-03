@@ -7,6 +7,9 @@ set paths in settings.json file and start watching for changes
 4) run 'grunt watcher:fcl'
 5) run 'grunt watcher:cafe-chart'
 
+# HOW TO USE
+grunt watcher:`name`
+(grunt watcher:trd3, grunt watcher:fcl, grunt watcher:cafe-chart)
 
 # Legend:
 {
@@ -21,5 +24,3 @@ set paths in settings.json file and start watching for changes
     }
 }
 
-grunt watcher:`name`
-(grunt watcher:trd3, grunt watcher:fcl, grunt watcher:cafe-chart)
