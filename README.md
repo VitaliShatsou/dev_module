@@ -2,10 +2,13 @@
 set paths in settings.json file and start watching for changes
 # HOW TO START
 1) cd dev_module
-2) config 'settings.json' file
-3) run 'grunt watcher:trd3'
-4) run 'grunt watcher:fcl'
-5) run 'grunt watcher:cafe-chart'
+2) run 'npm i'
+3) config 'settings.json' file
+4) for every project make 'git pull && npm i'
+in different terminals make:
+5) run 'grunt watcher:trd3'
+6) run 'grunt watcher:fcl'
+7) run 'grunt watcher:cafe-chart'
 
 # HOW TO USE
 grunt watcher:`name`
